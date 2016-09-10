@@ -1,0 +1,26 @@
+############################# Filebeat ######################################
+filebeat:
+  prospectors:
+    -
+      paths:
+        - /var/log/sys.log
+
+      input_type: log
+
+      document_type: <%=@environment%>
+
+  registry_file: /var/lib/filebeat/registry
+output:
+
+  logstash:
+    hosts: ["localhost:5044"]
+    bulk_max_size: 1024
+
+    tls:
+      certificate_authorities: ["/etc/pki/tls/certs/logstash-forwarder.crt"]
+
+shipper:
+
+logging:
+  files:
+    rotateeverybytes: 10485760 # = 10MB

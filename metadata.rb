@@ -1,0 +1,13 @@
+name 'elk'
+maintainer 'Estu Fardani'
+maintainer_email 'andro.medh4@gmail.com'
+license 'MIT'
+description 'Install/Configures elk'
+long_description 'Install/Configures elk'
+version '0.1.1'
+
+depends 'java'
+depends 'elasticsearch'
+depends 'python'
+depends 'kibana'
+depends 'nginx', '2.7.6'

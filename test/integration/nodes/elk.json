@@ -1,0 +1,8 @@
+{
+  "id": "elk",
+  "run_list": ["recipe[elk::elasticsearch]"],
+  "chef_environment": "development",
+  "automatic": {
+    "ipaddress": "192.168.33.33"
+  }
+}
